@@ -10,7 +10,15 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world!");
+            string foober = "Hello, World!";
+            Console.WriteLine(foober);
+
+            foober = String.Concat(foober, ' ', 'T');
+            string[] bax = foober.Split(' ');
+            string qux = Array.Find(bax,
+                element => element.StartsWith('T'));
+
+            Console.WriteLine(String.Format("{0}revor is cool!", qux));
         }
     }
 }
